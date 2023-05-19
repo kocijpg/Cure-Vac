@@ -1,0 +1,27 @@
+@import '../utilities/index';
+@import '../mixins/index';
+
+#{$bodyClass} {
+    .callout {
+        display: flex;
+        flex-direction: column-reverse;
+        @include mq('md') {
+            flex-direction: row;
+        }
+        
+        &__left,
+        &__right {
+            flex: 1;
+        }
+
+        &__cta {
+            margin-top: 40px;
+
+            a {
+                border: 1px solid $black;
+                padding: 5px 10px;
+                display: inline-flex;
+            }
+        }
+    }
+}

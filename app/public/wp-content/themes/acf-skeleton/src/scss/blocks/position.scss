@@ -1,0 +1,236 @@
+@import '../utilities/index';
+@import '../mixins/index';
+
+#{$bodyClass}{
+    .border-positions {
+        border-bottom: 1px solid rgba(202, 202, 202, 0.4);
+        padding-bottom: 0;
+
+        .options {   
+
+            //MOBILE
+            @include mq('md',max){
+                margin-bottom: 20px;
+                font-family: "Roboto";
+                font-size: 16px;
+                //display: flex;
+                text-align: center; 
+
+                .member-position {
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    @include general-transition;
+                    cursor: pointer;
+                    color: #f16e30;
+                    position: relative;
+                    
+                    &:hover {
+                        color:#00a1b3;
+                    }
+
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+    
+                    &.active {
+                        color:#00a1b3;
+    
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+
+            //For Desktop
+            @include mq("lg") {
+                margin-bottom: 20px;
+                font-family: "Roboto";
+                font-size: 16px;
+                display: flex; 
+                //display grid yerine bunu kullanıp
+                //margin-right ile ayarladık yaknılıklarını
+
+
+                .member-position {
+                    margin-right: 90px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    @include general-transition;
+                    cursor: pointer;
+                    color: #f16e30;
+                    position: relative;
+                    
+                    &:hover {
+                        color:#00a1b3;
+                    }
+    
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -20px;
+                        width: 100%;
+                        @include general-transition;
+                        left: 0;
+                        right: 0;
+                        height: 5px;
+                        opacity: 0;
+                        background-color: #00a1b3;
+                    }
+                 
+                    &:hover {
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+    
+                    &.active {
+                        color:#00a1b3;
+    
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            
+        }   
+    }
+
+    .members-wrap{
+
+        //MOBILE
+        @include mq('md',max){
+
+            // flex-wrap: wrap;
+            // display: flex;
+            //margin: 0 -30px;
+            cursor: pointer;
+            margin-top: 15px;
+            //text-align: center;
+
+            .member{
+                //width: 33.3%;
+                padding: 15px 15px;
+                display: none;
+                
+                &.visible {
+                    display: block; 
+                }
+
+                &__title {
+                    margin-bottom: 15px;
+                }
+    
+                &:hover{
+                    transform: translateY(-5px);
+                    transition: 0.3s;
+                    box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.2);
+                }
+
+                .image{
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    
+    
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                } 
+
+            }
+            h2{
+                font-family: "Open Sans";
+                color: #f16e30;
+                font-size: 18px;
+            }
+
+            .entry-content{
+                font-size: 16px;
+                color: #545759;
+
+            }
+        }
+
+
+
+        //For Desktop
+        @include mq("lg") {
+            flex-wrap: wrap;
+            display: flex;
+            margin: 0 -30px;
+            cursor: pointer;
+            margin-top: 15px;
+           
+            .member{
+                width: 33.3%;
+                padding: 20px 30px;
+                display: none; //this part use for the which one is the position
+    
+                &.visible {
+                    display: block; 
+                }
+    
+                .blue-line {
+                    display: block;
+                    border: 3px solid #00a1b3;
+                    width: 100%;     
+                }
+    
+                &__title {
+                    margin-bottom: 0;
+                }
+    
+                &:hover{
+                    transform: translateY(-5px);
+                    transition: 0.3s;
+                    box-shadow: 0px 1px 20px 1px rgba(0,0,0,0.2);
+                }
+    
+                .image{
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    width: 100%;
+    
+                    img {
+                        width: 100%;
+                    }
+                } 
+            }
+    
+            h2{
+                font-family: "Open Sans";
+                color: #f16e30;
+                font-size: 16px;
+                font-weight: bold;
+            }
+    
+            .entry-content{
+                font-size: 16px;
+                color: #545759;
+    
+                // &::after {
+                //     content: "";
+                //     display: inline-block;
+                //     background-image: url("../../dist/images/svg/Arrow-orange.svg");
+                //     background-size: cover;
+                //     background-position: center;
+                //     background-repeat: no-repeat;
+                //     width: 27px;
+                //     height: 20px;
+                //     position: absolute;
+                //     bottom: 15px;
+                //     right: 15px;
+                // }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "acf/careers",
+  "title": "Careers",
+  "description": "Careers block.",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["careers", "custom", "Careers"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

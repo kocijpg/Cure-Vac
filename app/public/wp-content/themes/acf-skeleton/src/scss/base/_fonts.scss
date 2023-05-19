@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Slick";
+    src: url('./wp-content/themes/genesis-child/fonts/slick.eot');
+    src: local('Slick'),
+        url('./wp-content/themes/genesis-child/fonts/slick.eot?#iefix') format('embedded-opentype'),
+        url('./wp-content/themes/genesis-child/fonts/slick.woff') format('woff'),
+        url('./wp-content/themes/genesis-child/fonts/slick.ttf') format('truetype'),
+        url('./wp-content/themes/genesis-child/fonts/slick.svg#slick') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @include font-face("Font Family Name", "Font File Name", FontWeight, FontStyle);

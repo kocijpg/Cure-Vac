@@ -1,0 +1,117 @@
+@import '../utilities/index';
+@import '../mixins/index';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap');
+
+#{$bodyClass}{
+
+    .title{
+          
+        font-size: calc(10px + 0.725vw);
+        color: #00a1b3;
+        position: relative;
+        // margin-left: 11%; 
+        margin-top: 25%;
+        font-weight: 600;
+    
+        //Burası 768pxden düşük cihazlar için (mobile)
+        @include mq('md',max){
+            font-size: 18px;
+            margin-top: 34%;
+        }
+
+        //For Desktop
+        @include mq("lg") {
+            //px de kullanılabilr
+            margin-top: 17%;
+            // margin-left: 11%;           
+        }
+
+    }
+    .date-info{
+        position: relative;
+        margin-top: 5%;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 10%;
+
+        @include mq("lg") {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+
+        }
+    }
+
+    .month{
+        text-transform: uppercase;
+        color: #00a1b3;
+        font-size: 15px;
+        font-family:'Roboto';
+    }
+
+    .day{
+        color: #00a1b3;
+        font-size: 23px;
+        font-family: 'Roboto';
+        font-weight: 600;
+    }
+
+    .hr{
+        width: 100%;
+        border-style: solid;
+        color: #00a1b3;
+        border-width: 2px;
+
+        @include mq("lg") {
+            width: 90%; 
+        }
+    }
+
+    .content{
+        font-family: 'Roboto';
+        font-size: 16px;
+
+        p{
+            // &::after {
+            //     content: "";
+            //     display: inline-block;
+            //     background-image: url("/wp-content/themes/acf-skeleton/dist/images/svg/Arrow-orange-shape.svg");
+            //     background-size: cover;
+            //     background-position: center;
+            //     background-repeat: no-repeat;
+            //     width: 10px;
+            //     height: 7px;
+            // }
+
+            &:hover{
+                color: #e89b77;
+            }
+        }
+
+        .arrow{
+            color:#e89b77;
+            width: 10px;
+            height: 7px;
+        }
+    }
+   
+    .view{
+        font-size: 16px;
+        font-weight: 600;
+        color: #f16e30;
+
+        //arrow-orange.svg
+        &::after {
+            content: "";
+            display: inline-block;
+            background-image: url("/wp-content/themes/acf-skeleton/dist/images/svg/Arrow-orange.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 7px;
+        }
+
+        &:hover{
+            color: #e89b77;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../utilities/index';
+@import '../mixins/index';
+
+
+#{$bodyClass}{
+    .careers{
+        position: relative;    
+        
+      
+        .background-image {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            background-size: cover;
+
+            //PART HERO
+            .firsttitle {
+                font-family: "Roboto";
+                position: absolute; 
+                background-color: $white;
+                left: 40px;
+                bottom: 0px;
+                width: 45vh;
+
+                .title{
+                    font-size: 40px;
+                    color: #00a1b3;
+                    padding: 10px 10px;
+                }
+                .blue-line {
+                    display: block;
+                    background-color: #00a1b3;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 65%;
+                    height: 7px;
+                }
+               
+            }
+        }
+
+        
+    }
+}

@@ -1,0 +1,233 @@
+@import '../utilities/index';
+@import '../mixins/index';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap');
+
+
+#{$bodyClass} {
+    .hero {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .background-slides {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0; 
+            right: 0;
+            width: 100%;
+            height: 100%;
+
+            .slick-list,
+            .slick-track {
+                height: 100%;
+            }
+
+            .slide-image {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        
+
+        &__inner {
+            display: flex;
+            flex-direction: column-reverse;
+
+            @include mq('md') {
+                flex-direction: row;
+            }
+        }
+
+        &__inner {
+            display: block;
+        }
+
+        &__heading {
+            width: 0%;
+            padding: 150px 0px;
+
+
+            //------------TITLE PART-------------- 
+            .title {
+                margin-bottom: 0;
+                width: 611px;
+                height: 195px;
+                font-family: 'Roboto', sans-serif;
+                color: #ffff;
+            }
+            .small {
+                position: relative;
+                z-index: 1;
+                font-family: 'Roboto', sans-serif;
+                width: max-content; //BURASIYLA YAZIYI DEĞİŞTİRDİM
+                color: #ffff;
+            }
+
+
+            //------------mobile part-------------
+            @include mq('md', max){
+                .title {   
+                    //position: absolute;
+                    // background-color: rgba(202, 202, 202, 0.101);
+                    font-size: calc(44px + 0.725vw);
+                    font-weight: 300;
+                    padding: 60px 180px 0px 15px;
+                }
+                .small {
+                    display: none;
+                    // background-color: rgba(202, 202, 202, 0.101);
+                    // font-size: 25px;
+                    // font-weight: 200;
+                }
+            }
+
+            //------------table part-------------
+            @include mq-between("md", "lg"){
+                .title {  
+                    font-size: calc(57px + 1.725vw);
+                    font-weight: 400;
+                }
+                .small {
+                    font-size: 35px;
+                    font-weight: 300;
+                }
+            }
+
+            //------------desktop part-------------
+            @include mq("lg"){
+                .title {  
+                    font-size: calc(57px + 1.725vw);
+                    font-weight: 400;
+                }
+                .small {
+                    font-size: 35px;
+                    font-weight: 300;
+                }
+            }   
+        }
+
+
+        //-----------BOX-------------
+        &__box {
+
+            font-family: 'Roboto', sans-serif;
+            grid-template-columns: 2.6fr 1fr;
+
+            .left-box {
+                background-color: #ffff;
+                position: relative;
+
+                p {
+                    padding: 20px 20px 42px 20px;
+                }
+
+                .dna-image {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+
+            .right-box {
+                background-color: #f16e30;
+                color: #ffff;
+                position: relative;
+                width: 100%;
+
+                &:hover {
+                    background-color: #e89b77;
+                }
+
+                p {
+                    padding: 38px 17px 52px 17px;
+
+                    //arrow.svg
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        background-image: url("../../dist/images/svg/Arrow.svg");
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 27px;
+                        height: 20px;
+                        position: absolute;
+                        bottom: 15px;
+                        right: 15px;
+                    }
+                }
+            }
+
+            //------------mobile part-------------
+            @include mq('md', max) {
+                width: 100%;
+
+                .left-box {
+                    p {
+                        font-size: calc(10px + 0.725vw);
+                    }
+
+                    .dna-image {
+                        width: 150px;
+                    }
+                }
+
+                .right-box {
+                    p {
+                        font-size: calc(10px + 0.725vw);
+                    }
+                }
+            }
+
+            //------------tablet part-------------
+            @include mq-between("md", "lg") {
+                width: 100%;
+                .left-box {
+                    p {
+                        font-size: calc(10px + 0.725vw);
+                    }
+                    .dna-image {
+                        width: 200px;
+                    }
+                }
+                .right-box {
+                    p {
+                        font-size: calc(10px + 0.725vw);
+                    }
+                }
+            }
+
+            //------------desktop part-------------
+            @include mq("lg") {
+                width: 56%;
+
+                .left-box {
+                    .dna-image {
+                        width: 215px;
+                    }
+                }
+
+                //ONLY FOR DESKTOP VERSION
+                .blue-line {
+                    display: block;
+                    background-color: #00a1b3;
+                    width: 60%;
+                    height: 8px;
+                }
+
+                .right-box {
+                    &:hover {
+                        background-color: #e89b77;
+                    }
+
+                    p {
+                        padding: 38px 17px 52px 17px;
+                    }
+                }
+            }
+        }
+    }
+}

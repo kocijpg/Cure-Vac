@@ -1,0 +1,12 @@
+{
+  "name": "acf/contents",
+  "title": "Career Info Contents",
+  "description": "Position block. (create new)",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["contents", "career info contents"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

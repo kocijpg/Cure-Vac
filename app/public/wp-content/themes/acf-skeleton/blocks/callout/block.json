@@ -1,0 +1,12 @@
+{
+  "name": "acf/callout",
+  "title": "Callout",
+  "description": "Callout block.",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["callout", "custom"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

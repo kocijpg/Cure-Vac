@@ -1,0 +1,184 @@
+@import '../utilities/index';
+@import '../mixins/index';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap');
+
+#{$bodyClass} {
+    .mrna {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40vh;
+
+        &__info {
+            display: block;
+            background-color: $white;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .baslik {
+            color: #00a1b3;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .bilgi {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .blue-line {
+            display: block;
+            background-color: #00a1b3;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .link {
+            color: #f16e30;
+            font-size: 13px;
+            font-weight: bold;
+
+            p {
+                //orange-arrow.svg
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    background-image: url("/wp-content/themes/acf-skeleton/dist/images/svg/Arrow-orange.svg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 10px;
+                    height: 7px;
+                }
+
+                &:hover {
+                    color: #e89b77;
+                }
+            }
+        }
+
+        //------------mobile part-------------
+        @include mq('md', max) {
+
+            &__info {
+                width: 80%;
+                height: 50%;
+            }
+
+            .firstpost {
+                position: relative;
+                width: 100%;
+                padding: 20px 60px 0px 20px;
+                font-size: calc(10px + 0.725vw);
+
+                .blue-line {
+                    width: 50%;
+                    height: 7px;
+                }
+                .mrna-image {
+                    width: 40px;
+                    right: 0;
+                    top: -19vh;
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                .mobile-doctor {
+                    display: block;
+                    width: 35%;
+                    right: 0;
+                    top: 0;
+                    transform: translateY(-100%);
+                    position: absolute;
+                }
+                .doctor-image{
+                    display: none;
+                }        
+            }
+        }
+
+        //------------tablet part-------------
+        @include mq-between("md", "lg"){
+            &__info {
+                width: 45%;
+                height: 60%;
+            }
+
+            .firstpost {
+                position: relative;
+                width: 435px;
+                padding: 20px 110px 0px 20px;
+
+                .mrna-image {
+                    width: 80px;
+                    left: -8vh;
+                    top: -2vh;
+                    position: absolute;
+                }
+
+                .doctor-image {
+                    width: 52%;
+                    left: 0;
+                    display: block;
+                    transform: translateX(-100%);
+                    position: absolute;
+                    z-index: -1;
+                }
+                .mobile-doctor {
+                    display: none;
+                }
+                .blue-line {
+                
+                    width: 30%;
+                    height: 8px;
+                }
+            }
+        }
+
+        //------------desktop part-------------
+        @include mq("lg") {
+
+            &__info {
+                width: 45%;
+                height: 60%;
+            }
+
+            .firstpost {
+                position: relative;
+                width: 435px;
+                padding: 20px 110px 0px 20px;
+
+                .mrna-image {
+                    width: 80px;
+                    left: -8vh;
+                    top: -2vh;
+                    position: absolute;
+                }
+
+                .doctor-image {
+                    width: 52%;
+                    left: 0;
+                    display: block;
+                    transform: translateX(-100%);
+                    position: absolute;
+                    z-index: -1;
+                }
+                .mobile-doctor {
+                    display: none;
+                }
+                .blue-line {
+                
+                    width: 30%;
+                    height: 8px;
+                }
+            }  
+
+        }
+
+    }
+}

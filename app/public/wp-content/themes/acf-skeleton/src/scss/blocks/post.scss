@@ -1,0 +1,123 @@
+@import '../utilities/index';
+@import '../mixins/index';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap');
+
+#{$bodyClass} {
+    .post {
+        position: relative;
+        height: 40vh;
+
+
+        .baslik {
+            color: #00a1b3;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .bilgi {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+
+        .link {
+            color: #f16e30;
+            font-size: 13px;
+            font-weight: bold;
+
+            p {
+                //orange-arrow.svg
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    background-image: url("/wp-content/themes/acf-skeleton/dist/images/svg/Arrow-orange.svg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 10px;
+                    height: 7px;
+                }
+
+                &:hover {
+                    color: #e89b77;
+                }
+            }
+        }
+        
+
+        //------------mobile part-------------
+        @include mq('md', max){
+            &__info {
+                display: block;
+                background-color: $white;
+                width: 45%;
+                height: 60%;
+                position: absolute;
+                left: 25%;
+                bottom: 0px;
+                font-family: 'Roboto', sans-serif;
+    
+                @include mq('md') {
+                    flex-direction: row;
+                }
+    
+                .second-post {
+                    position: relative;
+                    width: 435px;
+                    padding: 0px 160px 0px 0px;
+                }
+            }
+
+        }
+
+        //------------tablet part-------------
+        @include mq-between("md", "lg"){
+            &__info {
+                display: block;
+                background-color: $white;
+                width: 45%;
+                height: 60%;
+                position: absolute;
+                left: 11%;
+                bottom: 0px;
+                font-family: 'Roboto', sans-serif;
+    
+                @include mq('md') {
+                    flex-direction: row;
+                }
+    
+                .second-post {
+                    position: relative;
+                    width: 435px;
+                    padding: 0px 110px 0px 20px;
+                }
+            }
+        }
+
+        //------------desktop part-------------
+        @include mq("lg"){
+            &__info {
+                display: block;
+                background-color: $white;
+                width: 45%;
+                height: 60%;
+                position: absolute;
+                left: 11%;
+                bottom: 0px;
+                font-family: 'Roboto', sans-serif;
+    
+                @include mq('md') {
+                    flex-direction: row;
+                }
+    
+                .second-post {
+                    position: relative;
+                    width: 435px;
+                    padding: 0px 110px 0px 20px;
+                }
+            }
+        }
+
+    }
+}

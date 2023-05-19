@@ -1,0 +1,122 @@
+//==============================================
+// Layout/Footer
+//==============================================
+#{$bodyClass} {
+    .site-footer {
+        &__inner {
+            padding: 20px 10px 10px 0px;
+            border-top: 1px solid rgba(202, 202, 202, 0.4);
+            color: #545759;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;  
+
+            @include mq('md', max){
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            @include mq-between("md","lg"){
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            @include mq("lg"){
+                display: flex;
+                justify-content: space-between;
+            }
+               
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            a{
+                color: #8e8f90;
+            }
+            a:hover{
+                color: #f16e30;
+            }
+            p{
+                margin-left: 10px;
+            }
+          
+        }
+        
+        &__links{
+
+            //mobile
+            @include mq('md', max){
+                width: 65%;
+                order: 2;
+            }
+
+            //tablet
+            @include mq-between("md","lg"){
+                width: 70%;
+                order: 2;
+            }
+        }
+
+        &__social{
+
+            letter-spacing: 15px;
+            
+            //Burası 768pxden düşük cihazlar için (mobile)
+            @include mq('md', max){
+                margin-left: 5px;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            //Tablet için
+            @include mq-between("md","lg"){
+                font-size: 18px;
+                margin-left: 5px;
+                margin-bottom: 10px;
+            }
+
+            //for desktop ?
+            @include mq("lg"){
+                padding: 0px 0px 0px 15px; 
+                margin-left: 15px;
+                border-left: 1px solid rgba(202, 202, 202, 0.4);
+            }
+
+            .social-links-wrapper{
+                display: flex;
+                gap: 15px;
+            }
+
+            //social links
+
+            i[aria-label="facebook"]{
+                color: #8e8f90;
+            }
+            i[aria-label="twitter"]{
+                color: 	#8e8f90;
+            }
+            i[aria-label="linkedin"]{
+                color: #8e8f90;
+            }
+            i[aria-label="youtube"]{
+                color: #8e8f90;
+            }
+
+            i[aria-label="facebook"]:hover{
+                color: #3b5998;
+            }
+            i[aria-label="twitter"]:hover{
+                color: 	#55acee;
+            }
+            i[aria-label="linkedin"]:hover{
+                color: #0077b5;
+            }
+            i[aria-label="youtube"]:hover{
+                color: #cd201f;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "acf/latest",
+  "title": "latest",
+  "description": "latest block. (create new)",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["latest", "custom"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

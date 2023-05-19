@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap);
+.editor-styles-wrapper .block-editor-block-list__layout .hero, body.frontend .hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero .background-slides, body.frontend .hero .background-slides {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero .background-slides .slick-list,
+.editor-styles-wrapper .block-editor-block-list__layout .hero .background-slides .slick-track, body.frontend .hero .background-slides .slick-list,
+body.frontend .hero .background-slides .slick-track {
+  height: 100%;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero .background-slides .slide-image, body.frontend .hero .background-slides .slide-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__inner, body.frontend .hero__inner {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media only screen and (min-width: 768px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__inner, body.frontend .hero__inner {
+    flex-direction: row;
+  }
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__inner, body.frontend .hero__inner {
+  display: block;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__heading, body.frontend .hero__heading {
+  width: 0%;
+  padding: 150px 0px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__heading .title, body.frontend .hero__heading .title {
+  margin-bottom: 0;
+  width: 611px;
+  height: 195px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__heading .small, body.frontend .hero__heading .small {
+  position: relative;
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+}
+@media only screen and (max-width: 767px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__heading .title, body.frontend .hero__heading .title {
+    font-size: calc(44px + 0.725vw);
+    font-weight: 300;
+    padding: 60px 180px 0px 15px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__heading .small, body.frontend .hero__heading .small {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__heading .title, body.frontend .hero__heading .title {
+    font-size: calc(57px + 1.725vw);
+    font-weight: 400;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__heading .small, body.frontend .hero__heading .small {
+    font-size: 35px;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__heading .title, body.frontend .hero__heading .title {
+    font-size: calc(57px + 1.725vw);
+    font-weight: 400;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__heading .small, body.frontend .hero__heading .small {
+    font-size: 35px;
+    font-weight: 300;
+  }
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box, body.frontend .hero__box {
+  font-family: "Roboto", sans-serif;
+  grid-template-columns: 2.6fr 1fr;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box, body.frontend .hero__box .left-box {
+  background-color: white;
+  position: relative;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box p, body.frontend .hero__box .left-box p {
+  padding: 20px 20px 42px 20px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box .dna-image, body.frontend .hero__box .left-box .dna-image {
+  position: absolute;
+  right: 0;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box, body.frontend .hero__box .right-box {
+  background-color: #f16e30;
+  color: white;
+  position: relative;
+  width: 100%;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box:hover, body.frontend .hero__box .right-box:hover {
+  background-color: #e89b77;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box p, body.frontend .hero__box .right-box p {
+  padding: 38px 17px 52px 17px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box p::after, body.frontend .hero__box .right-box p::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../dist/images/svg/Arrow.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box, body.frontend .hero__box {
+    width: 100%;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box p, body.frontend .hero__box .left-box p {
+    font-size: calc(10px + 0.725vw);
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box .dna-image, body.frontend .hero__box .left-box .dna-image {
+    width: 150px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box p, body.frontend .hero__box .right-box p {
+    font-size: calc(10px + 0.725vw);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box, body.frontend .hero__box {
+    width: 100%;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box p, body.frontend .hero__box .left-box p {
+    font-size: calc(10px + 0.725vw);
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box .dna-image, body.frontend .hero__box .left-box .dna-image {
+    width: 200px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box p, body.frontend .hero__box .right-box p {
+    font-size: calc(10px + 0.725vw);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box, body.frontend .hero__box {
+    width: 56%;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .left-box .dna-image, body.frontend .hero__box .left-box .dna-image {
+    width: 215px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .blue-line, body.frontend .hero__box .blue-line {
+    display: block;
+    background-color: #00a1b3;
+    width: 60%;
+    height: 8px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box:hover, body.frontend .hero__box .right-box:hover {
+    background-color: #e89b77;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .hero__box .right-box p, body.frontend .hero__box .right-box p {
+    padding: 38px 17px 52px 17px;
+  }
+}
+
+/*# sourceMappingURL=block.css.map*/

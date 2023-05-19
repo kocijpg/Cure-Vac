@@ -1,0 +1,12 @@
+{
+  "name": "acf/mrna",
+  "title": "mrna",
+  "description": "mrna block. (create new)",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["mrna", "custom"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

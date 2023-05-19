@@ -1,0 +1,12 @@
+{
+  "name": "acf/post",
+  "title": "post",
+  "description": "post block. (create new)",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["post", "custom"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

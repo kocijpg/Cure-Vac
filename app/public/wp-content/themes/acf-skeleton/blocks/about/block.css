@@ -1,0 +1,106 @@
+.editor-styles-wrapper .block-editor-block-list__layout .about-us, body.frontend .about-us {
+  position: relative;
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us .background-image, body.frontend .about-us .background-image {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us .background-image .firsttitle, body.frontend .about-us .background-image .firsttitle {
+    font-family: "Roboto";
+    position: absolute;
+    background-color: #ffffff;
+    left: 40px;
+    bottom: 0px;
+    width: 45vh;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us .background-image .firsttitle .title, body.frontend .about-us .background-image .firsttitle .title {
+    font-size: 40px;
+    color: #00a1b3;
+    padding: 10px 10px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us .background-image .firsttitle .blue-line, body.frontend .about-us .background-image .firsttitle .blue-line {
+    display: block;
+    background-color: #00a1b3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 7px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us__info, body.frontend .about-us__info {
+    font-family: "Roboto";
+    font-size: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0px 20px;
+    font-weight: 300;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us__info .title, body.frontend .about-us__info .title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bolder;
+    color: #00a1b3;
+    margin-bottom: 35px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us__info, body.frontend .about-us__info {
+    font-family: "Roboto";
+    font-size: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0px 20px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .about-us__info .title, body.frontend .about-us__info .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00a1b3;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+.editor-styles-wrapper .block-editor-block-list__layout .about-us .woman-image, body.frontend .about-us .woman-image {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .about-us .woman-image .left-box, body.frontend .about-us .woman-image .left-box {
+  bottom: 0;
+  left: 0;
+  background-color: #f16e30;
+  color: white;
+  position: absolute;
+  width: 165px;
+  height: 167px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .about-us .woman-image .left-box:hover, body.frontend .about-us .woman-image .left-box:hover {
+  background-color: #e89b77;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .about-us .woman-image .left-box p, body.frontend .about-us .woman-image .left-box p {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Roboto";
+  padding: 35px 10px 10px 10px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .about-us .woman-image .left-box p::after, body.frontend .about-us .woman-image .left-box p::after {
+  content: "";
+  display: inline-block;
+  background-image: url("../../dist/images/svg/Arrow.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/*# sourceMappingURL=block.css.map*/

@@ -1,0 +1,371 @@
+/* Blocks
+---------------------------------------------------------------------------------------------------- */
+
+/* Typographical Elements
+--------------------------------------------- */
+.editor-styles-wrapper .block-editor-block-list__layout,
+body.frontend {
+    font-family: $font-family-base;
+
+    .container,
+    .container-fluid {
+        margin: 0 auto;
+
+        &.alignfull,
+        &.alignwide {
+            max-width: 100%;
+        }
+    }
+
+    a,
+    link {
+        color: $color-primary;
+        @include general-transition;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $highlight;
+        }
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    ol,
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: flex;
+
+            &:before {
+                content: '';
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+
+    pre {
+        display: block;
+        padding: 9.5px;
+        margin: 0 0 10px;
+        line-height: 18px;
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: pre;
+        white-space: pre-wrap;
+    }
+
+    pre code {
+        padding: 0;
+        color: inherit;
+        white-space: pre;
+        white-space: pre-wrap;
+        background-color: transparent;
+        border: 0;
+    }
+
+    cite {
+        font-style: normal;
+    }
+
+    .clearfix {
+        @include clearfix;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        font-family: $font-family-heading;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    h1,
+    .h1 {
+        @include h1;
+    }
+
+    h2,
+    .h2 {
+        @include h2;
+    }
+
+    h3,
+    .h3 {
+        @include h3;
+    }
+
+    h4,
+    .h4 {
+        @include h4;
+    }
+
+    h5,
+    .h5 {
+        @include h5;
+    }
+
+    h6,
+    .h6 {
+        @include h6;
+    }
+
+    p,
+    .p {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &+p,
+        &+.p {
+            margin-top: 15px;
+        }
+    }
+
+    br {
+        @include mq('lg') {
+            display: block;
+        }
+    }
+
+    &.tab-pressed {
+        :focus {
+            outline: 2px dashed $black;
+        }
+    }
+
+    /* Blockquote
+    --------------------------------------------- */
+
+    blockquote,
+    blockquote.wp-block-quote {
+        background: transparent;
+        text-align: left;
+
+        p {
+            color: $highlight;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        cite,
+        .wp-block-quote__citation {
+            color: $highlight;
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 12px;
+            text-transform: uppercase;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &.is-large,
+        &.is-style-large {
+            margin: 20px auto;
+
+            cite {
+                text-align: left;
+            }
+        }
+
+    }
+
+    /* Pull Quote
+    --------------------------------------------- */
+
+    .wp-block-pullquote {
+        border: none;
+        padding: 0;
+
+        blockquote {
+            border-left: 0;
+            border-top: 8px solid $highlight;
+            border-bottom: 8px solid $highlight;
+            padding: 16px 0;
+            text-align: center;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        &.alignleft,
+        &.alignright {
+
+            blockquote {
+                max-width: 100%;
+            }
+        }
+    }
+
+    /* Separator
+    --------------------------------------------- */
+
+    .wp-block-separator,
+    hr {
+        background: transparent;
+        border: none;
+        width: 100%;
+        height: 32px;
+        position: relative;
+
+        &::before {
+            background: $color-primary;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            margin-top: -.5px;
+        }
+    }
+
+    /* Button 
+    --------------------------------------------- */
+    .wp-block-button a {
+        font-size: $font-size-base;
+    }
+
+    /* Image
+    --------------------------------------------- */
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wp-block-image figcaption {
+        text-align: left;
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    /* Tables
+    --------------------------------------------- */
+
+    .wp-block-table {
+
+        border-collapse: collapse;
+        width: 100%;
+
+        td,
+        th {
+            padding: .5em;
+            border: 1px solid;
+
+        }
+    }
+
+    /* Media And Text
+    --------------------------------------------- */
+
+    .wp-block-media-text.is-stacked-on-mobile {
+
+        @include mq('sm', max) {
+            // stack into single column sooner than block editor default
+            grid-template-columns: 1fr;
+            // !important needed to force media to show above content on smaller
+            // screens when block is set to Media on the right, Text on the left
+            grid-template-areas:
+                "media-text-media"
+                "media-text-content" !important;
+        }
+    }
+
+    /* Color Options
+    --------------------------------------------- */
+
+    @each $name,
+    $color in $brand_colors {
+
+        .has-#{$name}-color {
+            color: $color !important;
+        }
+
+        .has-#{$name}-background-color {
+            background-color: $color !important;
+        }
+    }
+
+    /* Group Block
+    --------------------------------------------- */
+    .wp-block-group {
+        margin: 0 auto !important;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+
+        &:not(.alignfull) {
+            @include mq('sm') {
+                max-width: 540px;
+            }
+
+            @include mq('md') {
+                max-width: 720px;
+            }
+
+            @include mq('lg') {
+                max-width: 960px;
+            }
+
+            @include mq('xl') {
+                max-width: 1140px;
+            }
+
+            @include mq('xxl') {
+                max-width: 1320px;
+            }
+        }
+
+        .alignfull {
+            .wp-block-group__inner-container {
+                .alignfull {
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    max-width: 100vw;
+                }
+
+                .alignwide {
+                    width: auto;
+
+                    @include mq('xl') {
+                        margin-left: 0;
+                        margin-right: 0;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

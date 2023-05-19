@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap);
+.editor-styles-wrapper .block-editor-block-list__layout .mrna, body.frontend .mrna {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna__info, body.frontend .mrna__info {
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-family: "Roboto", sans-serif;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna .baslik, body.frontend .mrna .baslik {
+  color: #00a1b3;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna .bilgi, body.frontend .mrna .bilgi {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna .blue-line, body.frontend .mrna .blue-line {
+  display: block;
+  background-color: #00a1b3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna .link, body.frontend .mrna .link {
+  color: #f16e30;
+  font-size: 13px;
+  font-weight: bold;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna .link p::after, body.frontend .mrna .link p::after {
+  content: "";
+  display: inline-block;
+  background-image: url("/wp-content/themes/acf-skeleton/dist/images/svg/Arrow-orange.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 7px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .mrna .link p:hover, body.frontend .mrna .link p:hover {
+  color: #e89b77;
+}
+@media only screen and (max-width: 767px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna__info, body.frontend .mrna__info {
+    width: 80%;
+    height: 50%;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost, body.frontend .mrna .firstpost {
+    position: relative;
+    width: 100%;
+    padding: 20px 60px 0px 20px;
+    font-size: calc(10px + 0.725vw);
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .blue-line, body.frontend .mrna .firstpost .blue-line {
+    width: 50%;
+    height: 7px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .mrna-image, body.frontend .mrna .firstpost .mrna-image {
+    width: 40px;
+    right: 0;
+    top: -19vh;
+    position: absolute;
+    z-index: 1;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .mobile-doctor, body.frontend .mrna .firstpost .mobile-doctor {
+    display: block;
+    width: 35%;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    position: absolute;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .doctor-image, body.frontend .mrna .firstpost .doctor-image {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna__info, body.frontend .mrna__info {
+    width: 45%;
+    height: 60%;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost, body.frontend .mrna .firstpost {
+    position: relative;
+    width: 435px;
+    padding: 20px 110px 0px 20px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .mrna-image, body.frontend .mrna .firstpost .mrna-image {
+    width: 80px;
+    left: -8vh;
+    top: -2vh;
+    position: absolute;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .doctor-image, body.frontend .mrna .firstpost .doctor-image {
+    width: 52%;
+    left: 0;
+    display: block;
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: -1;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .mobile-doctor, body.frontend .mrna .firstpost .mobile-doctor {
+    display: none;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .blue-line, body.frontend .mrna .firstpost .blue-line {
+    width: 30%;
+    height: 8px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna__info, body.frontend .mrna__info {
+    width: 45%;
+    height: 60%;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost, body.frontend .mrna .firstpost {
+    position: relative;
+    width: 435px;
+    padding: 20px 110px 0px 20px;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .mrna-image, body.frontend .mrna .firstpost .mrna-image {
+    width: 80px;
+    left: -8vh;
+    top: -2vh;
+    position: absolute;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .doctor-image, body.frontend .mrna .firstpost .doctor-image {
+    width: 52%;
+    left: 0;
+    display: block;
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: -1;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .mobile-doctor, body.frontend .mrna .firstpost .mobile-doctor {
+    display: none;
+  }
+  .editor-styles-wrapper .block-editor-block-list__layout .mrna .firstpost .blue-line, body.frontend .mrna .firstpost .blue-line {
+    width: 30%;
+    height: 8px;
+  }
+}
+
+/*# sourceMappingURL=block.css.map*/

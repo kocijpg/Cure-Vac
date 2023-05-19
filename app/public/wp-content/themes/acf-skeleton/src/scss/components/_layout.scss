@@ -1,0 +1,80 @@
+/* Box Sizing
+--------------------------------------------- */
+
+html,
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Screen Reader Text
+--------------------------------------------- */
+
+.genesis-skip-link {
+	display: none;
+}
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus  {
+	clip: auto !important;
+	height: auto;
+	width: auto;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 15px 23px 14px;
+	color: #333;
+	background: #fff;
+	z-index: 100000; /* Above WP toolbar. */
+	text-decoration: none;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+}
+
+/* Sidebar Layouts
+--------------------------------------------- */
+
+@include mq('md', max) {
+
+	.sidebar-primary {
+		display: none;
+	}
+}
+
+@include mq('md') {
+
+	.sidebar-content,
+	.content-sidebar {
+
+		.site-main {
+			float: left;
+			width: calc(768px / 1168px) * 100%;
+		}
+
+		.sidebar-primary {
+			float: right;
+			width: calc(335px / 1168px) * 100%;
+		}
+	}
+
+	.sidebar-content .site-main {
+		float: right;
+	}
+
+	.sidebar-content .sidebar-primary {
+		float: left;
+	}
+}

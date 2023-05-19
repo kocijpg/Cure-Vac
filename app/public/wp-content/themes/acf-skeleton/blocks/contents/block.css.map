@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/contents/block.css","mappings":"AAIA;EACI;AAHJ,C","sources":["webpack://olive-studio-starter/./src/scss/blocks/contents.scss"],"sourcesContent":["@import '../utilities/index';\r\n@import '../mixins/index';\r\n\r\n\r\n#{$bodyClass}{\r\n    background-color: red;\r\n}"],"names":[],"sourceRoot":""}

@@ -1,0 +1,33 @@
+.editor-styles-wrapper .block-editor-block-list__layout .careers, body.frontend .careers {
+  position: relative;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .careers .background-image, body.frontend .careers .background-image {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .careers .background-image .firsttitle, body.frontend .careers .background-image .firsttitle {
+  font-family: "Roboto";
+  position: absolute;
+  background-color: #ffffff;
+  left: 40px;
+  bottom: 0px;
+  width: 45vh;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .careers .background-image .firsttitle .title, body.frontend .careers .background-image .firsttitle .title {
+  font-size: 40px;
+  color: #00a1b3;
+  padding: 10px 10px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .careers .background-image .firsttitle .blue-line, body.frontend .careers .background-image .firsttitle .blue-line {
+  display: block;
+  background-color: #00a1b3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 7px;
+}
+
+/*# sourceMappingURL=block.css.map*/

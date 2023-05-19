@@ -1,0 +1,30 @@
+@function strip-unit($value) {
+  @return calc($value / ($value * 0 + 1px));
+}
+
+
+@mixin fluid($property, $mobileSize, $tabletSize, $desktopSize, $important: null) {
+  #{$property}: $mobileSize $important;
+
+  @if $mobileSize {
+    @media only screen and (min-width: $mobile-start-fluid-size) and (max-width: $mobile-max-size-fluid) {
+      #{$property}: calc(100vw * #{strip-unit($mobileSize)} / #{strip-unit($mobile-design-width)}) $important;
+    }
+  }
+
+  @if $tabletSize {
+    @media only screen and (min-width: $tablet-start-fluid-size) and (max-width: $tablet-max-size-fluid) {
+      #{$property}: calc(100vw * #{strip-unit($tabletSize)} / #{strip-unit($tablet-design-width)}) $important;
+    }
+  }
+
+  @if $desktopSize {
+    @media only screen and (min-width: $desktop-start-fluid-size) {
+      #{$property}: calc(100vw * #{strip-unit($desktopSize)} / #{strip-unit($desktop-design-width)}) $important;
+    }
+  }
+
+  @media only screen and (min-width: $desktop-max-size-fluid) {
+    #{$property}: $desktopSize $important;
+  }
+}

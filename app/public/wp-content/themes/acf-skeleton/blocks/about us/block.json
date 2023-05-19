@@ -1,0 +1,12 @@
+{
+  "name": "acf/about",
+  "title": "About us",
+  "description": "About us block.",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["about", "custom"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

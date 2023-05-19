@@ -1,0 +1,12 @@
+{
+  "name": "acf/position",
+  "title": "Member List",
+  "description": "Position block. (create new)",
+  "category": "custom",
+  "icon": "admin-comments",
+  "keywords": ["member", "custom"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "block.php"
+  }
+}

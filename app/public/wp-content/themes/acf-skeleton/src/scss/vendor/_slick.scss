@@ -1,0 +1,22 @@
+//==============================================
+// Vendor/Slick
+//==============================================
+
+@import '~slick-carousel/slick/slick.scss';
+@import '~slick-carousel/slick/slick-theme.scss';
+
+
+// Fix Slider Stacking issue on load
+.slider-container {
+    overflow: hidden;
+}
+
+.slick-slide:nth-of-child(n+1) {
+    display: none;
+}
+
+.slick-initialized,
+.slick-slide:first-child {
+    display: block;
+}
+

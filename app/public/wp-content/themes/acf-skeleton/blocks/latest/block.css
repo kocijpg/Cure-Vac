@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300;400&display=swap);
+.editor-styles-wrapper .block-editor-block-list__layout .title, body.frontend .title {
+  font-size: calc(10px + 0.725vw);
+  color: #00a1b3;
+  position: relative;
+  margin-top: 25%;
+  font-weight: 600;
+}
+@media only screen and (max-width: 767px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .title, body.frontend .title {
+    font-size: 18px;
+    margin-top: 34%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .title, body.frontend .title {
+    margin-top: 17%;
+  }
+}
+.editor-styles-wrapper .block-editor-block-list__layout .date-info, body.frontend .date-info {
+  position: relative;
+  margin-top: 5%;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10%;
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .date-info, body.frontend .date-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.editor-styles-wrapper .block-editor-block-list__layout .month, body.frontend .month {
+  text-transform: uppercase;
+  color: #00a1b3;
+  font-size: 15px;
+  font-family: "Roboto";
+}
+.editor-styles-wrapper .block-editor-block-list__layout .day, body.frontend .day {
+  color: #00a1b3;
+  font-size: 23px;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .hr, body.frontend .hr {
+  width: 100%;
+  border-style: solid;
+  color: #00a1b3;
+  border-width: 2px;
+}
+@media only screen and (min-width: 992px) {
+  .editor-styles-wrapper .block-editor-block-list__layout .hr, body.frontend .hr {
+    width: 90%;
+  }
+}
+.editor-styles-wrapper .block-editor-block-list__layout .content, body.frontend .content {
+  font-family: "Roboto";
+  font-size: 16px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .content p:hover, body.frontend .content p:hover {
+  color: #e89b77;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .content .arrow, body.frontend .content .arrow {
+  color: #e89b77;
+  width: 10px;
+  height: 7px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .view, body.frontend .view {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f16e30;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .view::after, body.frontend .view::after {
+  content: "";
+  display: inline-block;
+  background-image: url("/wp-content/themes/acf-skeleton/dist/images/svg/Arrow-orange.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 7px;
+}
+.editor-styles-wrapper .block-editor-block-list__layout .view:hover, body.frontend .view:hover {
+  color: #e89b77;
+}
+
+/*# sourceMappingURL=block.css.map*/

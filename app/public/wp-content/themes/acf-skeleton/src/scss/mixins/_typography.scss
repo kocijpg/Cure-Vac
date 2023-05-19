@@ -1,0 +1,29 @@
+//==============================================
+// Mixins/Typography
+//==============================================
+
+@mixin h1 {
+    // OLD
+    //@include font-size(55px, ('md','lg'), (50px,70px));
+    @include fluid('font-size', 55px, 50px, 70px);
+}
+
+@mixin h2 {
+    @include fluid('font-size', 55px, 50px, 70px);
+}
+
+@mixin h3 {
+    @include fluid('font-size', 55px, 50px, 70px);
+}
+
+@mixin h4 {
+    @include fluid('font-size', 55px, 50px, 70px);
+}
+
+@mixin h5 {
+    @include fluid('font-size', 55px, 50px, 70px);
+}
+
+@mixin h6 {
+    @include fluid('font-size', 55px, 50px, 70px);
+}

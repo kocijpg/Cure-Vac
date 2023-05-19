@@ -1,0 +1,41 @@
+//==============================================
+// Component/Popups
+//==============================================
+
+.mfp-fade {
+    &.mfp {
+        &-container {
+            padding: 0;
+        }
+    }
+    &.mfp-bg {
+        background: transparent;
+        z-index: 999999;
+        opacity: 0;
+        transition: all 0.15s ease-out;
+
+        &.mfp-ready {
+            opacity: 0.95;
+        }
+
+        &.mfp-removing {
+            opacity: 0;
+        }
+    }
+    &.mfp-wrap {
+        z-index: 999999;
+        overflow-y: auto;
+        .mfp-content {
+            opacity: 0;
+            transition: all 0.15s ease-out;
+        }
+
+        &.mfp-ready .mfp-content {
+            opacity: 1;
+        }
+
+        &.mfp-removing .mfp-content {
+            opacity: 0;
+        }
+    }
+}

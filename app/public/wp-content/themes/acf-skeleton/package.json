@@ -1,0 +1,47 @@
+{
+  "name": "olive-studio-starter",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Olive Studio",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "devDependencies": {
+    "eslint-webpack-plugin": "^3.2.0",
+    "laravel-mix": "^6.0",
+    "laravel-mix-polyfill": "^3.0.1",
+    "postcss": "^8.4.18",
+    "postcss-scss": "^4.0.5",
+    "sass": "^1.56.0",
+    "sass-loader": "^13.1.0"
+  },
+  "dependencies": {
+    "bootstrap-scss": "^5.2.2",
+    "cross-env": "^7.0.3",
+    "headroom.js": "^0.12.0",
+    "jquery": "^3.6.1",
+    "jquery-inview": "^1.1.2",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "watch": "mix watch",
+    "production": "mix --production"
+  }
+}
